@@ -102,7 +102,7 @@ const Hero: React.FC = () => {
 
           <div className="relative rounded-3xl overflow-hidden">
             <img
-              src="/images/dashboard.png"
+              src="../images/dashboard.png"
               alt="Dashboard"
               className="w-full h-auto block"
             />
