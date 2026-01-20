@@ -1,5 +1,5 @@
 
-import React, { createContext, useState, useContext, ReactNode, useEffect } from 'react';
+import React, { createContext, useState, useContext, ReactNode, useEffect, useCallback } from 'react';
 import { translations } from '../utils/translations';
 
 type Language = 'en' | 'ru' | 'tj';
@@ -27,7 +27,7 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
     localStorage.setItem('language', lang);
   };
 
-  const t = (path: string) => {
+  const t = useCallback((path: string) => {
     const keys = path.split('.');
     let current: any = translations[language];
     for (const key of keys) {
@@ -35,7 +35,7 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
       current = current[key];
     }
     return current;
-  };
+  }, [language]);
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage: handleSetLanguage, t }}>

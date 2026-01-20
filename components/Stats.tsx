@@ -37,7 +37,7 @@ const Stats: React.FC = () => {
                    <div className="w-1.5 h-1.5 rounded-full bg-brand"></div>
                    {t('stats.aboutTag')}
                 </div>
-                <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.1]">
+                <h2 className="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.1] break-words">
                   {t('stats.title')}
                 </h2>
              </div>

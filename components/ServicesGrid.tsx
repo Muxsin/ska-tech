@@ -7,9 +7,9 @@ const ServicesGrid: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="services" className="py-24 sm:py-32 px-6 max-w-7xl mx-auto bg-white dark:bg-black transition-colors duration-300">
+    <section id="services" className="py-24 sm:py-32 px-6 max-w-7xl mx-auto bg-white dark:bg-black transition-colors duration-300 overflow-hidden">
       <div className="text-center max-w-3xl mx-auto mb-20">
-         <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-slate-900 dark:text-white mb-6">
+         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter text-slate-900 dark:text-white mb-6 break-words">
           {t('services.title')} <span className="text-brand-dark dark:text-brand">{t('services.titleHighlight')}</span>
         </h2>
         <p className="text-slate-600 dark:text-slate-400 text-lg font-medium leading-relaxed">
@@ -25,7 +25,7 @@ const ServicesGrid: React.FC = () => {
               <div className="mb-6 p-3 bg-white dark:bg-white/5 w-fit rounded-xl border border-slate-100 dark:border-white/5 shadow-sm">
                 <Globe className="w-6 h-6 text-brand-dark dark:text-brand" />
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">{t('services.card1Title')}</h3>
+              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3 break-words">{t('services.card1Title')}</h3>
               <p className="text-slate-500 dark:text-slate-400 max-w-md text-base leading-relaxed mb-8">
                   {t('services.card1Desc')}
               </p>
@@ -62,15 +62,16 @@ const ServicesGrid: React.FC = () => {
               <div className="mb-6 p-3 bg-white/10 w-fit rounded-xl backdrop-blur-sm border border-white/10">
                 <Shield className="w-6 h-6 text-brand" />
               </div>
-              <h3 className="text-xl font-bold mb-2">{t('services.card2Title')}</h3>
+              <h3 className="text-xl font-bold mb-2 break-words">{t('services.card2Title')}</h3>
               <p className="text-slate-400 text-sm leading-relaxed mb-4">
                   {t('services.card2Desc')}
               </p>
               
-              {/* Visual: Animated Shield/Scanner */}
+              {/* Visual: Animated Shield/Scanner - Optimized */}
               <div className="mt-auto flex items-center justify-center py-6">
                  <div className="relative">
-                    <div className="absolute inset-0 bg-brand/20 blur-2xl rounded-full animate-pulse-slow"></div>
+                    {/* Replaced animate-pulse-slow with static glow for performance */}
+                    <div className="absolute inset-0 bg-brand/20 blur-xl rounded-full"></div>
                     <Shield className="relative w-24 h-24 text-slate-800 dark:text-zinc-900 fill-slate-800 dark:fill-zinc-900 stroke-brand stroke-[1.5]" />
                     <div className="absolute inset-0 flex items-center justify-center">
                         <CheckCircle2 className="w-8 h-8 text-white fill-brand" />
@@ -86,7 +87,7 @@ const ServicesGrid: React.FC = () => {
               <div className="mb-6 p-3 bg-white dark:bg-white/5 w-fit rounded-xl border border-slate-100 dark:border-white/5 shadow-sm">
                 <Smartphone className="w-6 h-6 text-blue-500" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{t('services.card3Title')}</h3>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 break-words">{t('services.card3Title')}</h3>
               <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">
                   {t('services.card3Desc')}
               </p>
@@ -144,6 +145,7 @@ const ServicesGrid: React.FC = () => {
                   {/* Status Indicator */}
                   <div className="flex items-center gap-2 px-3 py-1.5 bg-green-50 dark:bg-green-500/10 border border-green-200 dark:border-green-500/20 rounded-full text-[11px] font-bold text-green-700 dark:text-green-400 uppercase tracking-wide shadow-sm">
                      <span className="relative flex h-2 w-2">
+                        {/* Ping animation is CSS based and usually light, kept for status indication */}
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                         <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                      </span>
@@ -153,7 +155,7 @@ const ServicesGrid: React.FC = () => {
                </div>
 
                <div>
-                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">{t('services.card4Title')}</h3>
+                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2 break-words">{t('services.card4Title')}</h3>
                   <p className="text-slate-500 dark:text-slate-400 max-w-sm text-base leading-relaxed">
                       {t('services.card4Desc')}
                   </p>

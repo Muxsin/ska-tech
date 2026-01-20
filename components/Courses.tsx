@@ -34,7 +34,7 @@ const Courses: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-24">
           <div className="text-brand-dark dark:text-brand text-xs font-black tracking-[0.3em] uppercase mb-4">{t('courses.hub')}</div>
-          <h2 className="text-4xl md:text-6xl font-extrabold tracking-tighter mb-6 text-slate-900 dark:text-white">{t('courses.title')}</h2>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tighter mb-6 text-slate-900 dark:text-white break-words">{t('courses.title')}</h2>
           <p className="text-slate-600 dark:text-slate-500 text-base md:text-lg max-w-xl mx-auto leading-relaxed">
             {t('courses.desc')}
           </p>
@@ -56,7 +56,7 @@ const Courses: React.FC = () => {
                      {c.cat}
                    </span>
                  </div>
-                 <h3 className="text-2xl font-bold mb-3 text-slate-900 dark:text-slate-100">{c.title}</h3>
+                 <h3 className="text-2xl font-bold mb-3 text-slate-900 dark:text-slate-100 break-words">{c.title}</h3>
                  <p className="text-[13px] text-slate-600 dark:text-slate-500 mb-10 leading-relaxed font-medium">
                    {c.desc}
                  </p>

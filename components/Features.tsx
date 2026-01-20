@@ -42,11 +42,11 @@ const Features: React.FC = () => {
   ];
 
   return (
-    <section className="py-32 bg-white dark:bg-black relative z-10 transition-colors duration-300">
+    <section className="py-32 bg-white dark:bg-black relative z-10 transition-colors duration-300 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         
         <div className="mb-20 max-w-2xl">
-          <h2 className="text-4xl md:text-6xl font-extrabold tracking-tighter text-slate-900 dark:text-white mb-6 leading-[0.9]">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tighter text-slate-900 dark:text-white mb-6 leading-[0.9] break-words">
             {t('features.title')}
           </h2>
           <div className="h-1.5 w-24 bg-gradient-to-r from-brand to-transparent rounded-full opacity-80"></div>
@@ -64,7 +64,7 @@ const Features: React.FC = () => {
                     {s.icon}
                   </div>
                   
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4 leading-tight group-hover:translate-x-1 transition-transform">
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4 leading-tight group-hover:translate-x-1 transition-transform break-words">
                     {s.title}
                   </h3>
                   
